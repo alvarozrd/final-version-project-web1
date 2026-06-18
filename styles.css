@@ -94,7 +94,7 @@ section p {
 }
 
 .boas-vindas {
-  background-image: linear-gradient(rgba(13, 61, 37, 0.82), rgba(13, 61, 37, 0.78)), url("../img/campus-ifsp-cjo.jpg");
+  background-image: linear-gradient(rgba(13, 61, 37, 0.82), rgba(13, 61, 37, 0.78)), url("campus-ifsp-cjo.jpg");
   background-position: center;
   background-size: cover;
   border-left: 6px solid #1f5c3f;
