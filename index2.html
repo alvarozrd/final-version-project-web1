@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia do IF - Calendário</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Guia do IF</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index2.html" class="ativo">Calendário</a></li>
+          <li><a href="index3.html">Professores</a></li>
+          <li><a href="index4.html">Biblioteca</a></li>
+          <li><a href="index5.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h2>Calendário Acadêmico</h2>
+        <p>Selecione o seu curso e semestre para ver a grade de horários das aulas.</p>
+
+        <form id="formulario-calendario">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="curso">Escolha o Curso</label>
+              <select id="curso">
+                <option value="">-- Selecione um curso --</option>
+                <option value="analise">Análise de Sistemas</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="semestre">Escolha o Semestre</label>
+              <select id="semestre" disabled>
+                <option value="">-- Selecione o semestre --</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section id="secao-tabela" style="display: none;">
+        <h2>Sua Grade de Horários</h2>
+        <table id="tabela-horarios">
+          <thead>
+            <tr>
+              <th>Dia</th>
+              <th>Horário</th>
+              <th>Disciplina</th>
+              <th>Professor</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela">
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Guia do IF. Calendário acadêmico.</p>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div vw-plugin-top-wrapper></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+  <script src="js/calendario&sac.js"></script>
+</body>
+</html>

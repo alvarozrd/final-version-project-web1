@@ -1,0 +1,509 @@
+/* reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+}
+body {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  line-height: 1.5;
+  color: #333;
+  padding-top: 155px;
+  /* background-color: #f5f5f5; */
+}
+
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+/* configs do cabeçalho e navegação */
+header {
+  background-color: #1f5c3f;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+  background-color: #0d3d25;
+}
+
+/* coloca margin no main */
+main {
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 24px;
+  color: #1f5c3f;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #1f5c3f;
+  padding-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.boas-vindas {
+  background-image: linear-gradient(rgba(13, 61, 37, 0.82), rgba(13, 61, 37, 0.78)), url("../img/campus-ifsp-cjo.jpg");
+  background-position: center;
+  background-size: cover;
+  border-left: 6px solid #1f5c3f;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 28px;
+}
+
+.boas-vindas h2 {
+  border-bottom: 0;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+}
+
+.boas-vindas p {
+  color: white;
+}
+
+.boas-vindas .texto-destaque {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.boas-vindas .botao {
+  background-color: white;
+  color: #1f5c3f;
+}
+
+.boas-vindas .botao:hover {
+  background-color: #e8f2ed;
+}
+
+.boas-vindas .botao-secundario {
+  background-color: rgba(255, 255, 255, 0.88);
+  color: #1f5c3f;
+}
+
+.boas-vindas .botao-secundario:hover {
+  background-color: white;
+}
+
+.acoes-boas-vindas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.acoes-boas-vindas .botao,
+.acoes-boas-vindas .botao-secundario {
+  text-align: center;
+}
+
+.busca-site-card {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 25px;
+  align-items: start;
+  border-left: 5px solid #1f5c3f;
+}
+
+.busca-site-card h2 {
+  border-bottom: 0;
+  color: #1f5c3f;
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+.area-busca label {
+  margin-bottom: 8px;
+}
+
+.resultados-busca {
+  margin-top: 15px;
+}
+
+.mensagem-busca {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.resultado-busca {
+  border-top: 1px solid #e0e0e0;
+  padding: 12px 0;
+}
+
+.resultado-busca:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.resultado-busca a {
+  color: #1f5c3f;
+  font-weight: bold;
+}
+
+.resultado-busca p {
+  margin-bottom: 0;
+}
+
+/* configura os banners/ artigos */
+article {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+article h3 { 
+  color: #1f5c3f;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+/* ajustando o tamanho do título do artigo para 18px, para ficar mais destacado e legível. */
+
+article p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.biblioteca-destaque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-left: 5px solid #1f5c3f;
+}
+
+.biblioteca-destaque h3 {
+  font-size: 22px;
+}
+
+.biblioteca-destaque .botao {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/*  */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Professores */
+.professor {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.professor img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #1f5c3f;
+}
+
+.professor h3 {
+  color: #1f5c3f;
+  margin-bottom: 8px;
+}
+
+.professor p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Livros */
+.livros {
+  align-items: stretch;
+}
+
+.livro-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+}
+
+.livro-card img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.livro-card h3 {
+  min-height: 54px;
+}
+
+.livro-card p {
+  flex: 1;
+}
+
+.livro-card .botao {
+  margin-top: 10px;
+}
+
+/* Botões */
+.botao {
+  background-color: #1f5c3f;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.botao:hover {
+  background-color: #0d3d25;
+}
+
+.botao-secundario {
+  background-color: #ddd;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.botao-secundario:hover {
+  background-color: #bbb;
+}
+
+/* Links simples */
+a {
+  color: #1f5c3f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #1f5c3f;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1f5c3f;
+  box-shadow: 0 0 5px rgba(31, 92, 63, 0.3);
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table th {
+  background-color: #1f5c3f;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  background-color: #1f5c3f;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  color: white;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  body {
+    padding-top: 140px;
+  }
+
+  header {
+    padding: 12px 0;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .busca-site-card {
+    grid-template-columns: 1fr;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  .biblioteca-destaque {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .boas-vindas {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .boas-vindas h2 {
+    font-size: 24px;
+  }
+
+  .acoes-boas-vindas {
+    width: 100%;
+  }
+}
