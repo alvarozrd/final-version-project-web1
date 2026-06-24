@@ -26,6 +26,24 @@ body {
   padding: 0 20px;
 }
 
+/* styles para a logo da bandeira do brasil e o link */
+
+.flag-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
+
+.flag-link img {
+  width: 44px;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
 
 
 /* configs do cabeçalho e navegação */
