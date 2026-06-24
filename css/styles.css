@@ -28,6 +28,23 @@ body {
 
 /* styles para a logo da bandeira do brasil e o link */
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  gap: 18px;
+}
+
+.header-top h1 {
+  color: white;
+  font-size: 26px;
+  margin: 0;
+  font-weight: 700;
+}
+
+
+
 .flag-link {
   display: inline-flex;
   align-items: center;
