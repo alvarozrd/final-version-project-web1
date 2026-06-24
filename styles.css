@@ -456,30 +456,45 @@ footer p {
   color: white;
 }
 
-/* Responsivo */
+/* configuração para navegacão mobile */
+
 @media (max-width: 768px) {
   body {
-    padding-top: 140px;
+    padding-top: 130px;
   }
 
   header {
-    padding: 12px 0;
+    padding: 10px 0;
   }
 
-  header h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  .header-top {
+    padding: 4px 0;
+    gap: 10px;
+  }
+
+  .header-top h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .flag-link img {
+    width: 36px;
+  }
+
+  nav {
+    margin-top: 10px;
   }
 
   nav ul {
-    gap: 5px;
+    gap: 2px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   nav a {
-    padding: 6px 10px;
-    font-size: 13px;
+    padding: 5px 8px;
+    font-size: 12px;
   }
 
   .grid-2,
@@ -510,4 +525,75 @@ footer p {
   .acoes-boas-vindas {
     width: 100%;
   }
+
+  /* Tabela responsiva */
+  table {
+    font-size: 13px;
+  }
+
+  table th,
+  table td {
+    padding: 8px 6px;
+  }
+
+  .suap-type {
+    background-color: #0e4226;
+  }
 }
+
+/* Extra pequeno - mobile muito compacto */
+@media (max-width: 480px) {
+  body {
+    padding-top: 115px;
+  }
+
+  .header-top {
+    gap: 8px;
+  }
+
+  .header-top h1 {
+    font-size: 16px;
+  }
+
+  .flag-link img {
+    width: 32px;
+  }
+
+  nav a {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+
+  /* Tabela com scroll horizontal */
+  section {
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 12px;
+    min-width: 600px;
+    display: table;
+  }
+
+  table th,
+  table td {
+    padding: 8px 6px;
+  }
+
+  table th {
+    white-space: nowrap;
+  }
+
+  .boas-vindas h2 {
+    font-size: 20px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  .suap-type {
+    background-color: #0e4226;
+  }
+}
+
