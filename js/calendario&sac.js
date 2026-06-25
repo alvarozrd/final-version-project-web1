@@ -308,22 +308,65 @@ if (curso && semestre && secaoTabela && corpoTabela) {
 let formulario = document.getElementById('form-duvida');
 
 if (formulario) {
-  document.getElementById('botao-enviar').addEventListener('click', function (evento) {
+  let botaoEnviar = document.getElementById('botao-enviar');
+  let mensagemRetorno = document.getElementById('mensagem-retorno');
+  let nomeInput = document.getElementById('nome');
+  let emailInput = document.getElementById('email');
+  let assuntoSelect = document.getElementById('assunto');
+  let mensagemInput = document.getElementById('mensagem');
+
+  botaoEnviar.addEventListener('click', function (evento) {
     evento.preventDefault();
-    // empede que o formulário seja enviado recarregando a página, ou seja, não daria para ver a informação customizada
 
-    let mensagem = document.getElementById('mensagem-retorno');
-    mensagem.textContent = 'Obrigado! Sua dúvida foi registrada.';
-    // o textcontent é uma propriedade que modifica o conteúdo de texto de um element, sem ser intrusivo, um alert mesmo, aparecia um balão no meio da tela, interrompendo u fluxo do usuário
+    let erros = [];
+    let primeiroCampoInvalido = null;
+    let nome = nomeInput.value.trim();
+    let email = emailInput.value.trim();
+    let assunto = assuntoSelect.value;
+    let mensagem = mensagemInput.value.trim();
 
-    mensagem.style.display = 'block'; // antes a mensagem estava escondida, agora ela aparece, mostrando a resposta para o usuário
+    if (!nome) {
+      erros.push('Por favor, informe seu nome.');
+      primeiroCampoInvalido = primeiroCampoInvalido || nomeInput;
+    }
+
+    if (!email) {
+      erros.push('Por favor, informe seu e-mail.');
+      primeiroCampoInvalido = primeiroCampoInvalido || emailInput;
+    } else if (!emailInput.validity.valid) {
+      erros.push('Por favor, informe um e-mail válido.');
+      primeiroCampoInvalido = primeiroCampoInvalido || emailInput;
+    }
+
+    if (!assunto) {
+      erros.push('Por favor, selecione um assunto.');
+      primeiroCampoInvalido = primeiroCampoInvalido || assuntoSelect;
+    }
+
+    if (!mensagem) {
+      erros.push('Por favor, descreva sua dúvida.');
+      primeiroCampoInvalido = primeiroCampoInvalido || mensagemInput;
+    }
+
+    if (erros.length > 0) {
+      mensagemRetorno.style.color = 'red';
+      mensagemRetorno.innerHTML = erros.join('<br>');
+      mensagemRetorno.style.display = 'block';
+      if (primeiroCampoInvalido) {
+        primeiroCampoInvalido.focus();
+      }
+      return;
+    }
+
+    mensagemRetorno.style.color = 'green';
+    mensagemRetorno.textContent = 'Obrigado! Sua dúvida foi registrada.';
+    mensagemRetorno.style.display = 'block';
 
     formulario.reset();
 
     setTimeout(function () {
-      mensagem.style.display = 'none';
+      mensagemRetorno.style.display = 'none';
     }, 3000);
-    // depois do timeout, no caso, 3 segundo a mensagem some
   });
 }
 
