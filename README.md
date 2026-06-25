@@ -1,6 +1,6 @@
-# Guia do IF - IFSP-CJO
+# Guia do IFSP-CJO
 
-Um portal web informativo e intuitivo para alunos e comunidade do Instituto Federal de São Paulo - Campus Catanduva-José Olimpio (IFSP-CJO).
+Um portal web informativo e intuitivo para alunos e comunidade do Instituto Federal de São Paulo, Campus Campos do Jordão. Este trabalho foi realizado com o objetivo de cumprir as competências necessárias para a conclusão da disciplina WEB1.
 
 ## 📋 Descrição
 
