@@ -30,7 +30,7 @@ final-version-project-web1/
 └── README.md           # Este arquivo
 ```
 
-## 🛠️ Tecnologias Utilizadas
+## 👨🏻‍💻 Tecnologias Utilizadas
 
 - **HTML5** - Estrutura semântica
 - **CSS3** - Design responsivo e moderno
